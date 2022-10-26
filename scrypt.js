@@ -29,26 +29,31 @@ const listEleImg = document.querySelectorAll('.cont-img');
 let activeIndex = 0;
 
 
-eleBtnRight.addEventListener('click', function () {
-	listEleImg[activeIndex].classList.remove('active');
+eleBtnRight.addEventListener('click', 
+    function () {
+        listEleImg[activeIndex].classList.remove('active');
+
+        if(activCounter === 4){
+            activCounter = -1;
+        }
+        activeIndex++;
 
 
-	activeIndex++;
+        listEleImg[activeIndex].classList.add('active');
 
-
-	listEleImg[activeIndex].classList.add('active');
-
-	eleBtnLeft.classList.remove('hidden');
-	if (activeIndex === listEleImg.length - 1) {
-		eleBtnRight.classList.add('hidden');
-	}
-});
+        eleBtnLeft.classList.remove('hidden');
+        if (activeIndex === listEleImg.length - 1) {
+            eleBtnRight.classList.add('hidden');
+        }
+    });
 
 eleBtnLeft.addEventListener('click', function () {
 	
 	listEleImg[activeIndex].classList.remove('active');
 
-	
+    if(activCounter === 0){
+        activCounter = 5;
+    }
 	activeIndex--;
 
 	
