@@ -8,7 +8,7 @@ const arrImages = [
 
 const eleSlider = document.querySelector('.container');
 const eleBtnLeft = document.querySelector('.btn-top');
-const eleBtnRight = document.querySelector('.btn-botton');
+const eleBtnRight = document.querySelector('.btn-bottom');
 
 
 for (let i = 0; i < arrImages.length; i++) {
@@ -33,8 +33,8 @@ eleBtnRight.addEventListener('click',
     function () {
         listEleImg[activeIndex].classList.remove('active');
 
-        if(activCounter === 4){
-            activCounter = -1;
+        if(activeIndex === 4){
+            activeIndex= -1;
         }
         activeIndex++;
 
@@ -51,8 +51,8 @@ eleBtnLeft.addEventListener('click', function () {
 	
 	listEleImg[activeIndex].classList.remove('active');
 
-    if(activCounter === 0){
-        activCounter = 5;
+    if(activeIndex === 0){
+        activeIndex = 5;
     }
 	activeIndex--;
 
