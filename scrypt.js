@@ -41,10 +41,7 @@ eleBtnRight.addEventListener('click',
 
         listEleImg[activeIndex].classList.add('active');
 
-        eleBtnLeft.classList.remove('hidden');
-        if (activeIndex === listEleImg.length - 1) {
-            eleBtnRight.classList.add('hidden');
-        }
+       
     });
 
 eleBtnLeft.addEventListener('click', function () {
@@ -59,8 +56,5 @@ eleBtnLeft.addEventListener('click', function () {
 	
 	listEleImg[activeIndex].classList.add('active');
 
-	eleBtnRight.classList.remove('hidden');
-	if (activeIndex === 0) {
-		eleBtnLeft.classList.add('hidden');
-	}
+	
 });
